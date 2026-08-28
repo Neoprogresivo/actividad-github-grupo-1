@@ -6,17 +6,17 @@ on:
 jobs:
   validar:
 
-  runs-on:ubuntu-latest
+    runs-on:ubuntu-latest
 
-  steps:
+    steps:
   
-  - name: Descargar proyecto
-    uses: actions/checkupt@v4
-  
-  - name: Configurar Python
-    uses: actions/setup-python@v5
-    with:
-      python-version: "3.12"
-  
-  - name: Validar sintaxis
-    run: python -m py_compile precios.py
+      - name: Descargar proyecto
+        uses: actions/checkupt@v4
+      
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      
+      - name: Validar sintaxis
+        run: python -m py_compile precios.py
